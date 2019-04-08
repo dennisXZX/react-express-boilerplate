@@ -10,6 +10,5 @@
 
 ## Check if they are connected
 1. Visit http://localhost:3000/
-2. If you see `Welcome to React`, it means the FrontEnd is working
-3. If you see `API is working properly`, it means the API is working
-4. Customise based on your needs
+2. If you see `Results from testAPI`, it means the API is working
+3. Customise based on your needs
