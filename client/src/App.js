@@ -5,7 +5,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          apiResponse: {}
+          apiResponse: {},
+          dbResponse: ""
         };
     }
 
@@ -16,17 +17,24 @@ class App extends Component {
             .catch(err => err);
     }
 
+  callDB() {
+    fetch("http://localhost:9000/testDB")
+      .then(res => res.text())
+      .then(res => this.setState({ dbResponse: res }))
+      .catch(err => err);
+  }
+
     componentDidMount() {
         this.callAPI();
+        this.callDB();
     }
 
     render() {
-        debugger;
         return (
             <div className="App">
-                <p>Results from testAPI</p>
                 <p className="App-intro">Name: {this.state.apiResponse.name}</p>
                 <p className="App-intro">Age: {this.state.apiResponse.age}</p>
+                <p className="App-intro">{this.state.dbResponse}</p>
             </div>
         );
     }
