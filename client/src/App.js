@@ -21,6 +21,7 @@ class App extends Component {
     }
 
     render() {
+        debugger;
         return (
             <div className="App">
                 <p>Results from testAPI</p>
