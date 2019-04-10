@@ -10,7 +10,10 @@ router.get("/", function(req, res, next) {
 });
 
 // Connecting to MongoDB
-mongoose.connect('mongodb://localhost/CodeWithFriends');
+mongoose.connect(
+  'mongodb://localhost:27017/CodeWithFriends',
+  { useNewUrlParser: true }
+);
 
 // If there is a connection error send an error message
 mongoose.connection.on("error", error => {
