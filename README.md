@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Run the app
 - cd into client folder and run `docker build -t web-client .` to build an image
 - cd into api folder and run `docker build -t web-api .` to build an image
